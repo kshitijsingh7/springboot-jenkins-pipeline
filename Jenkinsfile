@@ -118,10 +118,10 @@ pipeline {
                         sh 'JENKINS_NODE_COOKIE=dontKillMe nohup java -jar customer-data-0.0.1.war > nohup.out &'
                     }
                     else if (params.deployEnvironment == "QA") {
-                        echo 'DEPLOYING TO QA'
+                        sh 'JENKINS_NODE_COOKIE=dontKillMe nohup java -jar customer-data-0.0.1.war > nohup.out &'
                     }
                     else if (params.deployEnvironment == "UAT") {
-                        echo 'DEPLOYING TO UAT'
+                        sh 'JENKINS_NODE_COOKIE=dontKillMe nohup java -jar customer-data-0.0.1.war > nohup.out &'
                     }
                 }
             }
